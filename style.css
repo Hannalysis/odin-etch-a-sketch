@@ -2,3 +2,16 @@ body {
     background-color: black;
     color: white;
 }
+
+.row {
+    display: flex;
+}
+
+.box {
+    background-color: aquamarine;
+    border-radius: 10%;
+    border-style: groove;
+    border-color: greenyellow;
+    width: 125px;
+    height: 125px;
+}
