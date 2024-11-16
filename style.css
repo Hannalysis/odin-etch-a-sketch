@@ -3,9 +3,18 @@ body {
     color: white;
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    width: 1000px;
+    height: 1000px;
+    margin-left: 30.25%;
+}
+
 #header {
     display: flex;
-    margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 button {
@@ -16,9 +25,12 @@ button {
     border-radius: 8%;
     border-color: greenyellow;
     border-style:ridge;
-    margin-left: 50%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
+}
+
+.button-wall {
+    flex-grow: 1;
 }
 
 button:hover {
@@ -28,6 +40,7 @@ button:hover {
 
 .row {
     display: flex;
+    flex-grow: 1;
 }
 
 .box {
@@ -35,6 +48,5 @@ button:hover {
     border-radius: 10%;
     border-style: groove;
     border-color: greenyellow;
-    width: 125px;
-    height: 125px;
+    flex-grow: 1;
 }
