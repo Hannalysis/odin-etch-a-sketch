@@ -30,8 +30,13 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
     let gridNum = prompt("Grid size request: n x n. n = ");
-    clearGrid();
-    newGrid(gridNum);
+    if (gridNum > 100) {
+        return alert("Please enter a number up to 100 only.");
+    }
+    else {
+        clearGrid();
+        newGrid(gridNum);
+    }
 });
 
 function newGrid(number) {
