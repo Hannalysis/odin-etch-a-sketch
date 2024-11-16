@@ -35,7 +35,16 @@ button.addEventListener("click", () => {
     }
     else {
         clearGrid();
-        newGrid(gridNum);
+        gridType = prompt("Would you like an rng Colour trail? Y/N?");
+        if (gridType.toLowerCase() == 'y'){
+            newGrid(gridNum);
+            boxColourTrail();
+        } 
+        else {
+            newGrid(gridNum);
+            boxTrail();
+        }
+        
     }
 });
 
@@ -53,7 +62,6 @@ function newGrid(number) {
             row.appendChild(div);
         }
     }
-    boxTrail();
 }
 
 function clearGrid () {
@@ -62,5 +70,22 @@ function clearGrid () {
     for (let i = 1; i <= elementLength; i++){
         console.log(elements);
         elements[0].remove();
+    }
+}
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function boxColourTrail(){
+    for (box of boxes) {
+        box.addEventListener('mouseover', (event) => {
+            event.target.style.backgroundColor = getRandomColor();
+        });
     }
 }
